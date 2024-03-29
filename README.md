@@ -28,4 +28,11 @@ authentication token and to pass on to the model.
 
 ### program jp_test_llama_0.ipynb
 
-This program demon
+This program demonstrates a way to leverage the Replicate API for custom text generation tasks using preferred LLM models. By encapsulating the details of API interaction and response handling within a Python class, it simplifies the process of integrating advanced language model capabilities into a variety of applications, ranging from content creation to AI-driven text analysis:
+- Initialization: The LLM class is initialized with a model_name and replicate_api_token
+- Text Generation: The generate method takes a text prompt as input and uses the Replicate platform to generate output based on this prompt
+- Output Collection: The method expects the model's response to be a generator, iterating over this generator to concatenate parts of the generated text into a single output string.
+- Error Handling
+- Example Usage
+
+
