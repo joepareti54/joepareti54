@@ -20,3 +20,8 @@ alter the process between steps.
 This program also uses langchain and manages each step explicitly without relying on SimpleSequentialChain 
 for the entire process. You're able to clearly differentiate between the question and the answer, 
 providing more tailored outputs and interactions.
+
+### program llama-simple.ipynb
+
+This program demonstrates programmatic access to a llama model and highlights the correct way to set the 
+authentication token and to pass on to the model.
