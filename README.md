@@ -25,3 +25,7 @@ providing more tailored outputs and interactions.
 
 This program demonstrates programmatic access to a llama model and highlights the correct way to set the 
 authentication token and to pass on to the model.
+
+### program jp_test_llama_0.ipynb
+
+This program demon
