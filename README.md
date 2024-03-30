@@ -35,4 +35,23 @@ This program demonstrates a way to leverage the Replicate API for custom text ge
 - Error Handling
 - Example Usage
 
+### program jp_llama_langchain_rag_faiss_1.ipynb
 
+Customization
+Knowledge Base: You can expand the knowledge_base dictionary with new entries as needed. Make sure to re-generate and re-index embeddings after updates.
+Embedding Model: The default model is all-MiniLM-L6-v2. You can change the model used for embedding generation to better suit your specific requirements or to experiment with performance differences.
+
+Additional Notes
+This program is designed for demonstration purposes and showcases how to integrate semantic search capabilities into Python applications.
+For production use, consider scalability aspects and ensure proper error handling and logging mechanisms are in place.
+
+Implementation Overview
+The core of this program's functionality revolves around two main enhancements: generating semantic embeddings for the knowledge base entries and implementing an efficient similarity search. Here's a brief overview of the key steps involved in the implementation:
+
+Generating Embeddings: The sentence-transformers library is utilized to convert textual content from the knowledge base into high-dimensional vector representations (embeddings). This process involves iterating over each entry in the knowledge_base dictionary and using the model (e.g., all-MiniLM-L6-v2) to generate embeddings that capture the semantic meaning of the text. These embeddings are stored in a NumPy array for efficient handling.
+
+Indexing with FAISS: Once embeddings are generated, they are indexed using FAISS (Facebook AI Similarity Search), a library specialized for fast similarity searching. This involves creating a FAISS index (e.g., IndexFlatL2) and adding the generated embeddings to this index. The index is then used to perform similarity searches: given a query, the system encodes it into an embedding using the same transformer model, and queries the FAISS index to find the most semantically similar knowledge base entry.
+
+Retrieving Relevant Entries: The retrieval process is triggered by user queries. Each query is transformed into an embedding and passed to the FAISS index, which returns the index(es) of the embedding(s) most similar to the query. These indices are used to fetch the corresponding knowledge base entries, which are then presented as the query's answer.
+
+These enhancements significantly improve the system's ability to understand and match queries with relevant information based on semantic similarity, moving beyond simple keyword matching to a more nuanced understanding of content.
