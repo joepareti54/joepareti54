@@ -59,4 +59,4 @@ These enhancements significantly improve the system's ability to understand and 
 ### program jp_llama_langchain_rag_0.ipynb
 
 this program is explained here https://www.linkedin.com/pulse/enhancing-ai-retrieval-augmented-generation-demo-system-joseph-pareti-t4fcf/?trackingId=MSd3TWXgR8iYZYh%2BUK8Ksg%3D%3D
-and is a preparation step for jp_llama_langchain_rag_faiss_1.ipynb
+and is a preparation step for jp_llama_langchain_rag_faiss_1.ipynb : it uses a simplified knowledge base implemented as a python dictionary. 
