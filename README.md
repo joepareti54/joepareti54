@@ -38,7 +38,7 @@ This program demonstrates a way to leverage the Replicate API for custom text ge
 ### program jp_llama_langchain_rag_faiss_1.ipynb
 For the knowledge base implementation refer to this Q&A : https://chat.openai.com/c/ec610024-ce65-456b-bb3b-7f24e78d9161
 
-In this program, emebdiings are defined and FAISS is used.
+In this program, embeddings are defined and FAISS is used.
 
 Customization
 
