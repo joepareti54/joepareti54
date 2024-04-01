@@ -55,3 +55,8 @@ Indexing with FAISS: Once embeddings are generated, they are indexed using FAISS
 Retrieving Relevant Entries: The retrieval process is triggered by user queries. Each query is transformed into an embedding and passed to the FAISS index, which returns the index(es) of the embedding(s) most similar to the query. These indices are used to fetch the corresponding knowledge base entries, which are then presented as the query's answer.
 
 These enhancements significantly improve the system's ability to understand and match queries with relevant information based on semantic similarity, moving beyond simple keyword matching to a more nuanced understanding of content.
+
+### program jp_llama_langchain_rag_0.ipynb
+
+this program is explained here https://www.linkedin.com/pulse/enhancing-ai-retrieval-augmented-generation-demo-system-joseph-pareti-t4fcf/?trackingId=MSd3TWXgR8iYZYh%2BUK8Ksg%3D%3D
+and is a preparation step for jp_llama_langchain_rag_faiss_1.ipynb
