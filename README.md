@@ -91,3 +91,28 @@ Features in this GNN model are attributes or properties associated with each nod
 Purpose: The features are used to initialize the state of each node in the graph. They provide the raw input that the GNN uses to compute more complex representations through its layers, leveraging both the intrinsic data (the node features themselves) and the structural data (how nodes are connected).
 
 If the graph represents a simple chemical structure, a feature could indicate a binary property, such as whether an atom is carbon (1) or not (0). These features are the basis for all further calculations and learning within the network.
+### test2.py
+This is a toy program used to explain DIFFUSION in the context of Alpha Fold.
+
+Original Data Initialization:
+
+The script starts with an original data point set to 5.0. This is a simplified one-dimensional example, representing a single value from which we will generate noisy versions and then attempt to recover the original through a denoising process.
+Noise Addition Function (add_noise):
+
+A function that takes a data point and a specified noise level, then returns the data with Gaussian noise added. This simulates the process of corrupting clean data with random variations, mimicking the initial stages of a diffusion model where data is progressively noised.
+Noise Predictor Class (NoisePredictor):
+
+A simple placeholder class designed to model the ability to predict and estimate the level of noise in data. It includes:
+An initialization method that sets a starting guess for a noise factor.
+A train method that adjusts the noise factor based on the difference between noisy data and original data, simulating a learning process where the model adjusts its parameters based on observed data.
+A predict_noise method that calculates an estimated noise level for given data based on the learned noise factor.
+Training Phase (train_diffusion):
+
+This function simulates the training of a noise prediction model over several steps. It starts by adding a large amount of noise to the original data and initializes the NoisePredictor.
+For each training step, it generates new noisy data with decreasing noise levels, trains the NoisePredictor to better estimate the noise based on the difference from the original data, and adjusts the model accordingly. This step simulates the typical training of a diffusion model where the model learns to predict earlier, less noisy states from more noisy ones.
+Inference Phase (inference_diffusion):
+
+Using the trained NoisePredictor, this function attempts to recover the original data from a noisy state by iteratively predicting and subtracting the estimated noise. This simulates the denoising phase of a diffusion model, where the model applies learned patterns to iteratively refine a noisy input into a clear output.
+Execution Flow:
+The script begins by running the training phase, where it simulates the addition of noise to the original data and trains the NoisePredictor to estimate this noise.
+It then proceeds to the inference phase, starting from the noisy data produced at the end of the training phase, and uses the trained NoisePredictor to denoise the data, ideally recovering something close to the original data point.
