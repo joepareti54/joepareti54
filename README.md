@@ -116,3 +116,65 @@ Using the trained NoisePredictor, this function attempts to recover the original
 Execution Flow:
 The script begins by running the training phase, where it simulates the addition of noise to the original data and trains the NoisePredictor to estimate this noise.
 It then proceeds to the inference phase, starting from the noisy data produced at the end of the training phase, and uses the trained NoisePredictor to denoise the data, ideally recovering something close to the original data point.
+
+
+### lm_rag_gpt2_test5d.ipynb
+
+# Financial News Analyzer
+
+A lightweight, GPU-accelerated system for processing and analyzing financial news documents using transformer models and semantic search.
+
+## Architecture
+
+### Core Components:
+1. **Document Processor**
+   - PDF text extraction
+   - Text cleaning and normalization
+   - Metadata extraction
+
+2. **Neural Processing Engine**
+   - Document embedding generation
+   - Semantic search capabilities
+   - Response generation
+
+3. **Query Interface**
+   - Interactive query processing
+   - Context-aware response generation
+   - Relevance scoring
+
+### Key Features:
+- Efficient GPU utilization
+- Document-level metadata tracking
+- Semantic similarity search
+- Contextual response generation
+- Error handling and recovery
+
+### Technical Specifications:
+- Model: GPT-2 for text generation
+- Embeddings: SentenceTransformer (all-MiniLM-L6-v2)
+- Vector Store: FAISS
+- PDF Processing: PyMuPDF
+
+## Capabilities:
+- Process financial news PDFs
+- Extract and index document content
+- Generate embeddings for semantic search
+- Answer queries using context from documents
+- Provide relevant financial insights
+
+## Performance:
+- Document processing: ~7-8 documents/second
+- Query response time: <2 seconds
+- Memory footprint: <4GB GPU RAM
+
+## Usage Example:
+```python
+processor = FinanceNewsProcessor("path/to/docs")
+processor.init_models()
+processor.load_documents()
+processor.create_embeddings()
+
+# Query the system
+response = processor.retrieve_and_generate(
+    "What is the impact of rising interest rates?"
+)
