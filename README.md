@@ -171,10 +171,10 @@ A lightweight, GPU-accelerated system for processing and analyzing financial new
 Upload your PDF files to a folder in Google Drive
 Run the code in Google Colab with just one modification:
 
-# Change this path to your Google Drive folder containing PDFs
+- Change this path to your Google Drive folder containing PDFs
 directory_path = '/content/drive/My Drive/Your_PDF_Folder/'
 
-# Run the main function (everything else is automated)
+- Run the main function (everything else is automated)
 if __name__ == "__main__":
     main()
 
