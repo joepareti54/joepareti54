@@ -173,8 +173,10 @@ A lightweight, GPU-accelerated system for processing and analyzing financial new
 
 - In a Colab notebook cell, paste the code and modify only this line:
 
+```python
 # Change this path to your Google Drive folder containing PDFs
 directory_path = '/content/drive/My Drive/Your_PDF_Folder/'
+```
 
 The program will:
 - Mount your Google Drive
