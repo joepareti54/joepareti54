@@ -175,7 +175,7 @@ A lightweight, GPU-accelerated system for processing and analyzing financial new
 
 ```python
 # Change this path to your Google Drive folder containing PDFs
-directory_path = '/content/drive/My Drive/Your_PDF_Folder/'
+directory_path = '/content/drive/My Drive/All_Finance_PDF_old/'
 ```
 
 The program will:
