@@ -169,12 +169,14 @@ A lightweight, GPU-accelerated system for processing and analyzing financial new
 
 ## Usage Example:
 Upload your PDF files to a folder in Google Drive
+
 Run the code in Google Colab with just one modification:
 
 - Change this path to your Google Drive folder containing PDFs
 directory_path = '/content/drive/My Drive/Your_PDF_Folder/'
 
 - Run the main function (everything else is automated)
+  
 if __name__ == "__main__":
     main()
 
@@ -183,5 +185,4 @@ The program will:
 - Load PDF documents
 - Initialize the models
 - Start an interactive query session where you can:
-Type your questions
-Type 'quit' to exit
+Type your questions or type 'quit' to exit
