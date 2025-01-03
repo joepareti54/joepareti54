@@ -168,13 +168,20 @@ A lightweight, GPU-accelerated system for processing and analyzing financial new
 - Memory footprint: <4GB GPU RAM
 
 ## Usage Example:
-```python
-processor = FinanceNewsProcessor("path/to/docs")
-processor.init_models()
-processor.load_documents()
-processor.create_embeddings()
+Upload your PDF files to a folder in Google Drive
+Run the code in Google Colab with just one modification:
 
-# Query the system
-response = processor.retrieve_and_generate(
-    "What is the impact of rising interest rates?"
-)
+# Change this path to your Google Drive folder containing PDFs
+directory_path = '/content/drive/My Drive/Your_PDF_Folder/'
+
+# Run the main function (everything else is automated)
+if __name__ == "__main__":
+    main()
+
+The program will:
+- Mount your Google Drive
+- Load PDF documents
+- Initialize the models
+- Start an interactive query session where you can:
+Type your questions
+Type 'quit' to exit
