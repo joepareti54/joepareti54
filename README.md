@@ -182,5 +182,4 @@ The program will:
 - Mount your Google Drive
 - Load PDF documents
 - Initialize the models
-- Start an interactive query session where you can:
-Type your questions or type 'quit' to exit
+- Start an interactive query session where you can type your questions or type 'quit' to exit
