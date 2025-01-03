@@ -168,17 +168,13 @@ A lightweight, GPU-accelerated system for processing and analyzing financial new
 - Memory footprint: <4GB GPU RAM
 
 ## Usage Example:
-Upload your PDF files to a folder in Google Drive
 
-Run the code in Google Colab with just one modification:
+- Upload your PDF files to a folder in Google Drive
 
-- Change this path to your Google Drive folder containing PDFs
+- In a Colab notebook cell, paste the code and modify only this line:
+
+# Change this path to your Google Drive folder containing PDFs
 directory_path = '/content/drive/My Drive/Your_PDF_Folder/'
-
-- Run the main function (everything else is automated)
-  
-if __name__ == "__main__":
-    main()
 
 The program will:
 - Mount your Google Drive
